@@ -5,50 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OTP Verification</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+	<link rel="stylesheet" href="styles.css">
 
-    .container {
-        text-align: center;
-    }
-
-    #verification_heading {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-
-    #verification_subtext {
-        font-size: 10px;
-        color: #888;
-        margin-bottom: 30px;
-    }
-
-    .code-container {
-        display: flex;
-        justify-content: center;
-    }
-
-    .code {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-        text-align: center;
-        margin: 0 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-    }
-</style>
+   
 </head>
 <body>
 <div class="container">
@@ -63,37 +22,9 @@
         <input type="text" class="code" value="0" maxlength="1">
     </div>
 </div>
-<script>
-    const inputs = document.querySelectorAll('.code');
 
-    inputs.forEach((input, index) => {
-        input.addEventListener('input', (e) => {
-            const value = e.target.value;
-            if (value.length === 1 && index < inputs.length - 1) {
-                inputs[index + 1].focus();
-            }
-        });
-
-        input.addEventListener('keydown', (e) => {
-            if (e.key === 'Backspace' && index > 0 && inputs[index].value === '') {
-                inputs[index - 1].focus();
-            }
-        });
-    });
-</script>
-</body>
-</html>
-
-<html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <script type="text/javascript" src="./script.js"></script>
 
 </body>
 
